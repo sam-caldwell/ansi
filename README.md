@@ -3,11 +3,14 @@ ANSI Controls (Color, Navigation)
 
 ## Description
 
-A simple color printing library because life is not meant to be black and white.
+A simple color printing and cursor control library because life is not meant to be black and white.
+This project allows command-line control over the cursor navigation and color without any complicated
+libraries/dependencies.  It's just old-school ANSI codes doing things in Linux, MacOS, WSL the same way
+we did it in DOS.  No frills, no fuss.
 
 ## Status
 
-[![Go Tests](https://github.com/sam-caldwell/ansicolors/actions/workflows/go-tests.yaml/badge.svg)](https://github.com/sam-caldwell/simpleSet/actions/workflows/go-tests.yaml)
+[![Go Tests](https://github.com/sam-caldwell/ansi/actions/workflows/go-tests.yaml/badge.svg)](https://github.com/sam-caldwell/simpleSet/actions/workflows/go-tests.yaml)
 
 ## Usage
 
