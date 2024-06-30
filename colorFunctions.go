@@ -41,9 +41,7 @@ func BgRed() *Color {
 }
 
 // BgWhite - set color and return a new color object
-func BgWhite() *Color {
-	return (&Color{}).BgWhite()
-}
+func BgWhite() *Color { return (&Color{}).BgWhite() }
 
 // BgYellow - set color and return a new color object
 func BgYellow() *Color {
@@ -162,7 +160,7 @@ func Reverse() *Color {
 
 // Reset - Send Reset to stdout and return new color object
 func Reset() *Color {
-	return (&Color{}).Red()
+	return (&Color{}).Reset()
 }
 
 // Right - move cursor n units and return a new color object

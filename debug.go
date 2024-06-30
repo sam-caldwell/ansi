@@ -45,7 +45,13 @@ func Debugln(msg ...interface{}) *Color {
 
 // Debug - print debug message (if debugging is enabled)
 func (c *Color) Debug(msg ...interface{}) *Color {
-	return c.Debugf("%v ", msg)
+	if debugMode {
+		c.Yellow().Print("[DEBUG]: ")
+		for _, m := range msg {
+			c.Print(m.(string))
+		}
+	}
+	return c
 }
 
 // Debugf - print debug message (if debugging is enabled)

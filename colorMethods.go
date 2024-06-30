@@ -18,91 +18,91 @@ import (
 
 // BgBlack - Set color
 func (c *Color) BgBlack() *Color {
-	fmt.Print(CodeBgBlack)
+	_, _ = fmt.Fprint(out, CodeBgBlack)
 	return c
 }
 
 // BgBlue - Set color
 func (c *Color) BgBlue() *Color {
-	fmt.Print(CodeBgBlue)
+	_, _ = fmt.Fprint(out, CodeBgBlue)
 	return c
 }
 
 // BgCyan - Set color
 func (c *Color) BgCyan() *Color {
-	fmt.Print(CodeBgCyan)
+	_, _ = fmt.Fprint(out, CodeBgCyan)
 	return c
 }
 
 // BgGreen - Set color
 func (c *Color) BgGreen() *Color {
-	fmt.Print(CodeBgGreen)
+	_, _ = fmt.Fprint(out, CodeBgGreen)
 	return c
 }
 
 // BgMagenta - Set color
 func (c *Color) BgMagenta() *Color {
-	fmt.Print(CodeBgMagenta)
+	_, _ = fmt.Fprint(out, CodeBgMagenta)
 	return c
 }
 
 // BgRed - Set color
 func (c *Color) BgRed() *Color {
-	fmt.Print(CodeBgRed)
+	_, _ = fmt.Fprint(out, CodeBgRed)
 	return c
 }
 
 // BgWhite - Set color
 func (c *Color) BgWhite() *Color {
-	fmt.Print(CodeBgWhite)
+	_, _ = fmt.Fprint(out, CodeBgWhite)
 	return c
 }
 
 // BgYellow - Set color
 func (c *Color) BgYellow() *Color {
-	fmt.Print(CodeBgYellow)
+	_, _ = fmt.Fprint(out, CodeBgYellow)
 	return c
 }
 
 // Black - Set color
 func (c *Color) Black() *Color {
-	fmt.Print(CodeFgBlack)
+	_, _ = fmt.Fprint(out, CodeFgBlack)
 	return c
 }
 
 // Blink - Set format attribute
 func (c *Color) Blink() *Color {
-	fmt.Print(CodeBlink)
+	_, _ = fmt.Fprint(out, CodeBlink)
 	return c
 }
 
 // Blue - Set color
 func (c *Color) Blue() *Color {
-	fmt.Print(CodeFgBlue)
+	_, _ = fmt.Fprint(out, CodeFgBlue)
 	return c
 }
 
 // Bold - Set format attribute
 func (c *Color) Bold() *Color {
-	fmt.Print(CodeBold)
+	_, _ = fmt.Fprint(out, CodeBold)
 	return c
 }
 
 // Clear - Set format attribute
 func (c *Color) Clear() *Color {
-	fmt.Print(CodeClear)
+	_, _ = fmt.Fprint(out, CodeClear)
 	return c
 }
 
 // Cyan - Set color
 func (c *Color) Cyan() *Color {
-	fmt.Print(CodeFgCyan)
+	_, _ = fmt.Fprint(out, CodeFgCyan)
 	return c
 }
 
 // Dim - decrease intensity
 func (c *Color) Dim() *Color {
-	fmt.Print(CodeDim)
+	_, _ = fmt.Fprint(out, CodeDim)
 	return c
 }
 
@@ -128,82 +128,82 @@ func (c *Color) Flush() *Color {
 
 // Green - Set color
 func (c *Color) Green() *Color {
-	fmt.Print(CodeFgGreen)
+	_, _ = fmt.Fprint(out, CodeFgGreen)
 	return c
 }
 
 // Hidden - Set format attribute
 func (c *Color) Hidden() *Color {
-	fmt.Print(CodeHiddenText)
+	_, _ = fmt.Fprint(out, CodeHiddenText)
 	return c
 }
 
 // Indent - indent n spaces
 func (c *Color) Indent(n int) *Color {
 	for i := 0; i < n; i++ {
-		fmt.Print(" ")
+		_, _ = fmt.Fprint(out, " ")
 	}
 	return c
 }
 
 // Left - move cursor n units
 func (c *Color) Left(n int) *Color {
-	fmt.Printf(CodeMoveLeft, n)
+	_, _ = fmt.Fprintf(out, CodeMoveLeft, n)
 	return c
 }
 
 // LF - print a line feed char
 func (c *Color) LF() *Color {
-	fmt.Print(LineFeed)
+	_, _ = fmt.Fprint(out, LineFeed)
 	return c
 }
 
 // Line - Print a line of 'num' 'ch' characters
 func (c *Color) Line(ch string, num int) *Color {
-	fmt.Println(strings.Repeat(ch, num))
+	_, _ = fmt.Fprintln(out, strings.Repeat(ch, num))
 	return c
 }
 
 // Magenta - Set color
 func (c *Color) Magenta() *Color {
-	fmt.Print(CodeFgMagenta)
+	_, _ = fmt.Fprint(out, CodeFgMagenta)
 	return c
 }
 
 // Print - print text to stdout
 func (c *Color) Print(message string) *Color {
-	fmt.Print(message)
+	_, _ = fmt.Fprint(out, message)
 	return c
 }
 
 // Printf - print text to stdout
 func (c *Color) Printf(format string, a ...any) *Color {
-	fmt.Printf(format, a...)
+	_, _ = fmt.Fprintf(out, format, a...)
 	return c
 }
 
 // Println - print text to stdout
 func (c *Color) Println(message string) *Color {
-	fmt.Println(message)
+	_, _ = fmt.Fprintln(out, message)
 	return c
 }
 
 // Red - Set color
 func (c *Color) Red() *Color {
-	fmt.Print(CodeFgRed)
+	_, _ = fmt.Fprint(out, CodeFgRed)
 	return c
 }
 
 // Reverse - Set format attribute
 func (c *Color) Reverse() *Color {
-	fmt.Print(CodeReverse)
+	_, _ = fmt.Fprint(out, CodeReverse)
 	return c
 }
 
 // Reset - Send Reset to stdout
 func (c *Color) Reset() *Color {
 	defer func() { _ = os.Stdout.Sync() }()
-	fmt.Print(CodeReset) // Reset color
+	_, _ = fmt.Fprint(out, CodeReset) // Reset color
 	return c
 }
 
@@ -215,37 +215,37 @@ func (c *Color) Right(n int) *Color {
 
 // Space - print a Space character
 func (c *Color) Space() *Color {
-	fmt.Print(SpaceChar)
+	_, _ = fmt.Fprint(out, SpaceChar)
 	return c
 }
 
 // Strikethrough - Set format attribute
 func (c *Color) Strikethrough() *Color {
-	fmt.Print(CodeStrikeThrough)
+	_, _ = fmt.Fprint(out, CodeStrikeThrough)
 	return c
 }
 
 // Tab - print a Tab char
 func (c *Color) Tab() *Color {
-	fmt.Print(TabChar)
+	_, _ = fmt.Fprint(out, TabChar)
 	return c
 }
 
 // Time - print current time
 func (c *Color) Time() *Color {
-	fmt.Print(time.Now().Format(timeFormat))
+	_, _ = fmt.Fprint(out, time.Now().Format(timeFormat))
 	return c
 }
 
 // TopLeft - Move cursor to top left
 func (c *Color) TopLeft() *Color {
-	fmt.Print(CodeSetTopLeft)
+	_, _ = fmt.Fprint(out, CodeSetTopLeft)
 	return c
 }
 
 // Underline - Set format attribute
 func (c *Color) Underline() *Color {
-	fmt.Print(CodeUnderline)
+	_, _ = fmt.Fprint(out, CodeUnderline)
 	return c
 }
 
@@ -257,12 +257,12 @@ func (c *Color) Up(n int) *Color {
 
 // White - set color
 func (c *Color) White() *Color {
-	fmt.Print(CodeFgWhite)
+	_, _ = fmt.Fprint(out, CodeFgWhite)
 	return c
 }
 
 // Yellow - set color
 func (c *Color) Yellow() *Color {
-	fmt.Print(CodeFgYellow)
+	_, _ = fmt.Fprint(out, CodeFgYellow)
 	return c
 }
