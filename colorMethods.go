@@ -116,6 +116,7 @@ func (c *Color) Down(n int) *Color {
 func (c *Color) Fatal(exitCode int) *Color {
 	Reset()
 	//safety.Defer(func() { os.Exit(exitCode) })
+	os.Exit(exitCode)
 	return c
 }
 
