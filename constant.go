@@ -1,12 +1,15 @@
 package ansi
 
-//	 Ansi Color code constants
-//
-//		(c) 2023 Sam Caldwell.  MIT License
+/*
+ * Ansi color code constants
+ * (c) 2023 Sam Caldwell.  MIT License
+ */
+
 const (
-	LineFeed = "\n"
-	Space    = " "
-	Tab      = "\t"
+	timeFormat = "2006-01-02-15:04.0500 "
+	LineFeed   = "\n"
+	SpaceChar  = " "
+	TabChar    = "\t"
 
 	//CodeReset - This ansi code resets the system to the default state
 	CodeReset = "\033[0m"
