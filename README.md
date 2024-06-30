@@ -8,15 +8,15 @@ This project allows command-line control over the cursor navigation and color wi
 libraries/dependencies. It's just old-school ANSI codes doing things in Linux, MacOS, WSL the same way
 we did it in DOS. No frills, no fuss.
 
-## Status
+Additional functionality like `.Debug()` can be enabled/disabled using `.EnableDebug()` and `DisableDebug()`,
+respectively.  This will allow debug messages to be toggled on and off easily.
 
-[![Go Tests](https://github.com/sam-caldwell/ansi/actions/workflows/go-tests.yaml/badge.svg)](https://github.com/sam-caldwell/simpleSet/actions/workflows/go-tests.yaml)
 
 ## Usage
 
 ### Installation
 
-`go get "github.com/sam-caldwell/monorepo//"`
+`go get "github.com/sam-caldwell/ansi"`
 
 ### Printing colors...
 
@@ -53,3 +53,4 @@ we did it in DOS. No frills, no fuss.
         Reset()
 
 ```
+
