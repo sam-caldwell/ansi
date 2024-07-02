@@ -2,6 +2,7 @@ package ansi
 
 import (
 	"fmt"
+	"github.com/sam-caldwell/exit/v2"
 	"os"
 	"strings"
 	"time"
@@ -115,8 +116,7 @@ func (c *Color) Down(n int) *Color {
 // Fatal - Terminate the program and return the exit code
 func (c *Color) Fatal(exitCode int) *Color {
 	Reset()
-	//safety.Defer(func() { os.Exit(exitCode) })
-	os.Exit(exitCode)
+	exit.Now(exit.Code(exitCode))
 	return c
 }
 
