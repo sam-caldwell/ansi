@@ -1,5 +1,7 @@
 package ansi
 
+import "github.com/sam-caldwell/exit/v2"
+
 /*
  * Ansi Colors - Functions
  *
@@ -89,7 +91,7 @@ func Down(n int) *Color {
 }
 
 // Fatal - Terminate the program and return the exit code
-func Fatal(exitCode int) *Color {
+func Fatal(exitCode exit.Code) *Color {
 	return (&Color{}).Fatal(exitCode)
 }
 

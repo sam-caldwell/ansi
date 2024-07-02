@@ -114,9 +114,9 @@ func (c *Color) Down(n int) *Color {
 }
 
 // Fatal - Terminate the program and return the exit code
-func (c *Color) Fatal(exitCode int) *Color {
+func (c *Color) Fatal(exitCode exit.Code) *Color {
 	Reset()
-	exit.Now(exit.Code(exitCode))
+	exit.Now(exitCode)
 	return c
 }
 
