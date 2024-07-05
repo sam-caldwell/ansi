@@ -2,7 +2,7 @@ package ansi
 
 import (
 	"fmt"
-	"github.com/sam-caldwell/exit/v2"
+	"github.com/sam-caldwell/exit"
 	"os"
 	"strings"
 	"time"

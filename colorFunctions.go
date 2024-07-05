@@ -1,6 +1,6 @@
 package ansi
 
-import "github.com/sam-caldwell/exit/v2"
+import "github.com/sam-caldwell/exit"
 
 /*
  * Ansi Colors - Functions

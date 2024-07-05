@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/sam-caldwell/ansi/v2"
-	"github.com/sam-caldwell/exit/v2"
+	"github.com/sam-caldwell/exit"
 )
 
 func main() {
