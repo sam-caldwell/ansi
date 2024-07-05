@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/sam-caldwell/ansi/v2"
+	"github.com/sam-caldwell/ansi"
 	"github.com/sam-caldwell/exit"
 )
 
